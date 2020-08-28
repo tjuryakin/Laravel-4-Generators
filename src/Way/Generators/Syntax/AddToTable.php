@@ -58,7 +58,7 @@ class AddToTable extends Table {
 
         // If we have args, then it needs
         // to be formatted a bit differently
-        if (isset($field['args']))
+        if (isset($field['args']) && $type !== 'text')
         {
             $output = sprintf(
                 "\$table->%s('%s', %s)",
